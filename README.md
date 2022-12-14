@@ -15,8 +15,10 @@ place these files in ~/
 
 1. install vim plug to handle plugins with:
 
-```curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
 2. then, `vim ~/.vimrc` & enter `:PlugInstall`
 
