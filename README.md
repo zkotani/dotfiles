@@ -5,6 +5,7 @@ personal configuration files, etc.
 ## neofetch
 
 place this folder in ~/.config
+
 install neofetch with `sudo apt install -y neofetch`
 
 ## .bashrc, .vimrc
@@ -25,5 +26,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 3. for YouCompleteMe to work:
 
 `sudo apt install -y golang npm openjdk-20-jre`
+
 `cd .vim/plugged/YouCompleteMe/ && python3 install.py --all`
 
