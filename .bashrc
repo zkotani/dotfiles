@@ -53,6 +53,8 @@ alias python='python3'
 alias py='python3'
 alias pip='pip3'
 alias vi='vim'
+alias cl='clear'
+alias pyc='python -c'
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
