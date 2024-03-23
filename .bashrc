@@ -40,7 +40,6 @@ fi
 
 alias termtheme='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 
-alias rm='rm -i'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 6'
@@ -55,6 +54,11 @@ alias pip='pip3'
 alias vi='vim'
 alias cl='clear'
 alias pyc='python -c'
+alias lperl='/home/zyphlen/localperl/bin/perl'
+alias 'manlperl'='man /home/zyphlen/localperl/bin/perl'
+alias 'emacs'='emacs -nw'
+alias 'add-key'='sudo gpg --keyserver keyserver.ubuntu.com --recv-keys'
+alias 'rsync'='rsync -auh --partial --info=progress2'
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
@@ -68,3 +72,5 @@ if command -v minikube &>/dev/null
 then
   eval "$(minikube completion bash)"
 fi
+
+export PATH=$PATH:/usr/local/apache2/bin
