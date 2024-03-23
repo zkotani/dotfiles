@@ -1,5 +1,3 @@
-"set t_RV=
-
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -16,7 +14,7 @@ au FocusGained,BufEnter * checktime
 let mapleader = ","
 
 " Fast saving
-nmap <leader>w :w!<cr>
+map <leader>w :w!<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -58,7 +56,8 @@ set magic
 " Show matching brackets when text indicator is over them
 set showmatch
 
-" No annoying sound on errors
+" Fix terminal & sounds
+set t_RV=
 set noerrorbells
 set novisualbell
 set t_vb=
@@ -96,6 +95,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" set line numbers, use leader 0 to disable, leader 1 to re-enable
+set number
 map <leader>1 :set number<cr>
 map <leader>0 :set nonumber<cr>
 
@@ -111,7 +112,13 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
+map <leader>t0 :tabmove0<cr>
+map <leader>tt :tabnext<cr>
+map <leader>tp :tabprev<cr>
+
+" C build mappings
+map <leader>cc :!cc %<cr>
+map <leader>ao :!./a.out<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -127,7 +134,11 @@ map 0 ^
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
+" highlight cursor
 map <leader>cl :set cursorline cursorcolumn!<cr>
+
+" reload current file
+map <leader>e :e!<cr>
 
 call plug#begin()
 
@@ -140,6 +151,9 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+"Plug 'preservim/vim-markdown'
+Plug 'Yggdroot/indentline'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
@@ -149,10 +163,17 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
+map <leader>at :AirlineTheme 
+
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.colnr = ''
-let g:airline_theme='bubblegum'
+"let g:airline_theme='bubblegum'
+let g:airline_theme='deus'
+
+let g:vim_markdown_folding_disabled=1
+let g:indentLine_leadingSpaceChar='.'
+let g:indentLine_leadingSpaceEnabled='1'
 
 colorscheme codedark
 
-autocmd VimEnter * redraw!
+"autocmd VimEnter * redraw!
