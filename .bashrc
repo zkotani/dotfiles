@@ -59,6 +59,7 @@ alias 'manlperl'='man /home/zyphlen/localperl/bin/perl'
 alias 'emacs'='emacs -nw'
 alias 'add-key'='sudo gpg --keyserver keyserver.ubuntu.com --recv-keys'
 alias 'rsync'='rsync -auh --partial --info=progress2'
+alias 'tree'='tree --gitignore --ignore-case --filesfirst -ACFphuQNf -L 2'
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
