@@ -147,13 +147,16 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
-Plug 'Valloric/YouCompleteMe'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-"Plug 'preservim/vim-markdown'
+Plug 'preservim/vim-markdown'
 Plug 'Yggdroot/indentline'
 Plug 'scrooloose/syntastic'
+Plug 'girishji/vimcomplete'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'rafamadriz/friendly-snippets'
 
 call plug#end()
 
