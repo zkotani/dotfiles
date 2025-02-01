@@ -66,13 +66,17 @@ alias start='docker start -ai '
 alias mac='338adcf8915c'
 alias cls='clear'
 alias kctl='microk8s kubectl'
+alias nf='neofetch'
+alias ff='fastfetch'
+alias sb='source .bashrc'
+alias sv='source .vimrc'
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
 }
 
 #export PS1='\[$(tput bold)\]$(parse_git_branch)\u@\h:\[$(tput sgr0)\] \w\n\$ \[$(tput sgr0)\]'
-export PS1='\[\e[01;35m\]$(parse_git_branch)\[\e[01;33m\][\[\e[m\]\[\e[01;33m\]\d\[\e[m\]\[\e[01;33m\]\[\e[m\]\[\e[01;33m\] \t\[\e[m\]\[\e[01;33m\]]\n\[\e[m\]\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\H\[\e[m\]\[\e[01;32m\]:\[\e[m\] \[\e[01;36m\]\w\[\e[m\] \n\[\e[01;37m\]\$ \[\e[m\]'
+export PS1='\[\e[01;35m\]$(parse_git_branch)\[\e[01;33m\][\[\e[m\]\[\e[01;33m\]\d\[\e[m\]\[\e[01;33m\]\[\e[m\]\[\e[01;33m\] \t\[\e[m\]\[\e[01;33m\]] \[\e[m\]\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\H\[\e[m\]\[\e[01;32m\]:\[\e[m\] \[\e[01;36m\]\w\[\e[m\] \n\[\e[01;37m\]\$ \[\e[m\]'
 
 
 . "$HOME/.cargo/env"
