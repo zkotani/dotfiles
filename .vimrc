@@ -168,15 +168,20 @@ endif
 
 map <leader>at :AirlineTheme 
 
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.colnr = ''
-"let g:airline_theme='bubblegum'
-let g:airline_theme='deus'
+"let g:airline_left_sep = '|'
+let g:airline_symbols.linenr = ' ln: '
+let g:airline_symbols.maxlinenr = ' ~ '
+let g:airline_symbols.colnr = 'pos: '
+let g:airline_theme='bubblegum'
+"let g:airline_theme='deus'
 
-let g:vim_markdown_folding_disabled=1
-let g:indentLine_leadingSpaceChar='.'
-let g:indentLine_leadingSpaceEnabled='1'
+"let g:airline_section_a = airline#section#create([''])
+"let g:airline_section_b = airline#section#create([''])
+"let g:airline_section_c = airline#section#create([''])
+"let g:airline_section_x = airline#section#create([''])
+"let g:airline_section_y = airline#section#create([''])
 
 colorscheme codedark
 
 "autocmd VimEnter * redraw!
+let g:airline_section_z = airline#section#create(['linenr', 'maxlinenr', 'colnr'])

@@ -55,15 +55,10 @@ alias pip='pip3'
 alias vi='vim'
 alias cl='clear'
 alias pyc='python -c'
-alias lperl='/home/zyphlen/localperl/bin/perl'
-alias manlperl='man /home/zyphlen/localperl/bin/perl'
-alias emacs='emacs -nw'
 alias add-key='sudo gpg --keyserver keyserver.ubuntu.com --recv-keys'
 alias lbmx-vpn='sudo openfortivpn vpn.lbmx.com:10443 -u zkotani --trusted-cert 6d5c2fe785d965e6a09d81015e79c261f8247712c1b32d043f2ed1f9f44a1f6a'
 alias rsync='rsync -auh --partial --info=progress2'
 alias tree='tree --gitignore --ignore-case --filesfirst -ACFphuQNf -L 2'
-alias start='docker start -ai '
-alias mac='338adcf8915c'
 alias cls='clear'
 alias kctl='microk8s kubectl'
 alias nf='neofetch'
@@ -78,7 +73,3 @@ parse_git_branch() {
 #export PS1='\[$(tput bold)\]$(parse_git_branch)\u@\h:\[$(tput sgr0)\] \w\n\$ \[$(tput sgr0)\]'
 export PS1='\[\e[01;35m\]$(parse_git_branch)\[\e[01;33m\][\[\e[m\]\[\e[01;33m\]\d\[\e[m\]\[\e[01;33m\]\[\e[m\]\[\e[01;33m\] \t\[\e[m\]\[\e[01;33m\]] \[\e[m\]\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\H\[\e[m\]\[\e[01;32m\]:\[\e[m\] \[\e[01;36m\]\w\[\e[m\] \n\[\e[01;37m\]\$ \[\e[m\]'
 
-
-. "$HOME/.cargo/env"
-
-export PATH=$PATH:/usr/local/apache2/bin
