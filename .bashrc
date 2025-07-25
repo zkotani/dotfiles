@@ -4,8 +4,6 @@ case $- in
       *) return;;
 esac
 
-
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -14,8 +12,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=5000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -56,11 +54,10 @@ alias vi='vim'
 alias cl='clear'
 alias pyc='python -c'
 alias add-key='sudo gpg --keyserver keyserver.ubuntu.com --recv-keys'
-alias lbmx-vpn='sudo openfortivpn vpn.lbmx.com:10443 -u zkotani --trusted-cert 6d5c2fe785d965e6a09d81015e79c261f8247712c1b32d043f2ed1f9f44a1f6a'
+alias lbmx-vpn='sudo openfortivpn vpn.lbmx.com:10443 -u zkotani --trusted-cert 30481e09eb521f2007d5f617b37958b928a208bc55f009e1d690fce716d18f32'
 alias rsync='rsync -auh --partial --info=progress2'
 alias tree='tree --gitignore --ignore-case --filesfirst -ACFphuQNf -L 2'
 alias cls='clear'
-alias kctl='microk8s kubectl'
 alias nf='neofetch'
 alias ff='fastfetch'
 alias sb='source .bashrc'
@@ -73,3 +70,4 @@ parse_git_branch() {
 #export PS1='\[$(tput bold)\]$(parse_git_branch)\u@\h:\[$(tput sgr0)\] \w\n\$ \[$(tput sgr0)\]'
 export PS1='\[\e[01;35m\]$(parse_git_branch)\[\e[01;33m\][\[\e[m\]\[\e[01;33m\]\d\[\e[m\]\[\e[01;33m\]\[\e[m\]\[\e[01;33m\] \t\[\e[m\]\[\e[01;33m\]] \[\e[m\]\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\H\[\e[m\]\[\e[01;32m\]:\[\e[m\] \[\e[01;36m\]\w\[\e[m\] \n\[\e[01;37m\]\$ \[\e[m\]'
 
+. "$HOME/.cargo/env"
