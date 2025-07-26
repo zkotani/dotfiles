@@ -38,3 +38,4 @@ style.blinking = "Always"
 blink_interval = 500
 blink_timeout = 0
 thickness = 0.0
+unfocused_hollow = false
