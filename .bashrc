@@ -62,6 +62,7 @@ alias nf='neofetch'
 alias ff='fastfetch'
 alias sb='source .bashrc'
 alias sv='source .vimrc'
+alias lg='lazygit'
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
