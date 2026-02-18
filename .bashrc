@@ -38,37 +38,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias termtheme='bash -c "$(wget -qO- https://git.io/vQgMr)"'
-
-alias mkdir='mkdir -p'
-alias ps='ps auxf'
-alias ping='ping -c 6'
-alias less='less -R'
-alias ll='ls -hal --color=auto'
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias python='python3'
-alias py='python3'
-alias pip='pip3'
-alias vi='vim'
-alias cl='clear'
-alias pyc='python -c'
-alias add-key='sudo gpg --keyserver keyserver.ubuntu.com --recv-keys'
-alias lbmx-vpn='sudo openfortivpn vpn.lbmx.com:10443 -u zkotani --trusted-cert 30481e09eb521f2007d5f617b37958b928a208bc55f009e1d690fce716d18f32'
-alias rsync='rsync -auh --partial --info=progress2'
-alias tree='tree --gitignore --ignore-case --filesfirst -ACFphuQNf -L 2'
-alias cls='clear'
-alias nf='neofetch'
-alias ff='fastfetch'
-alias sb='source .bashrc'
-alias sv='source .vimrc'
-alias lg='lazygit'
-
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
-}
-
-#export PS1='\[$(tput bold)\]$(parse_git_branch)\u@\h:\[$(tput sgr0)\] \w\n\$ \[$(tput sgr0)\]'
-export PS1='\[\e[01;35m\]$(parse_git_branch)\[\e[01;33m\][\[\e[m\]\[\e[01;33m\]\d\[\e[m\]\[\e[01;33m\]\[\e[m\]\[\e[01;33m\] \t\[\e[m\]\[\e[01;33m\]] \[\e[m\]\[\e[01;32m\]\u\[\e[m\]\[\e[01;32m\]@\[\e[m\]\[\e[01;32m\]\H\[\e[m\]\[\e[01;32m\]:\[\e[m\] \[\e[01;36m\]\w\[\e[m\] \n\[\e[01;37m\]\$ \[\e[m\]'
+. "$HOME/.aliases"
 
 . "$HOME/.cargo/env"
+
+PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 "(%s) ");' PS1='\[\e[32;1m\]\u@\h\[\e[0m\]\[\e[97;1m\] \[\e[0m\]\[\e[38;5;214;1m\]${PS1_CMD1}\[\e[94m\]\w\[\e[0m\] \[\e[97;1m\]\$\[\e[0m\] '

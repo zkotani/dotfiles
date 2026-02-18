@@ -1,9 +1,0 @@
-[keyboard]
-bindings = [
-    { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
-    { key = "X", mods = "Control|Shift", action = "Quit" },
-    { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
-    { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
-    { key = ")", mods = "Control|Shift", action = "ResetFontSize" },
-    { key = "I", mods = "Control|Shift", action = "ToggleViMode" }
-]
