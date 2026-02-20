@@ -57,11 +57,11 @@ set magic
 set showmatch
 
 " Fix terminal & sounds
-set t_RV=
 set noerrorbells
 set novisualbell
-set t_vb=
-set tm=500
+" Handle escape sequences more predictably
+set ttimeout
+set ttimeoutlen=50
 
 " Add a bit extra margin to the left
 set foldcolumn=1
@@ -142,21 +142,13 @@ map <leader>e :e!<cr>
 
 call plug#begin()
 
-Plug 'flazz/vim-colorschemes'
-Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-Plug 'preservim/vim-markdown'
 Plug 'Yggdroot/indentline'
 Plug 'scrooloose/syntastic'
 Plug 'girishji/vimcomplete'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
-Plug 'rafamadriz/friendly-snippets'
 
 call plug#end()
 
@@ -168,12 +160,10 @@ endif
 
 map <leader>at :AirlineTheme
 
-"let g:airline_left_sep = '|'
-let g:airline_symbols.linenr = 'ln: '
-let g:airline_symbols.maxlinenr = ' ~ '
-let g:airline_symbols.colnr = 'pos: '
-let g:airline_theme='bubblegum'
-"let g:airline_theme='deus'
+let g:airline_symbols.linenr = 'ln:'
+let g:airline_symbols.maxlinenr = ' & '
+let g:airline_symbols.colnr = 'pos:'
+let g:airline_theme='deus'
 
 "let g:airline_section_a = airline#section#create([''])
 "let g:airline_section_b = airline#section#create([''])
@@ -182,6 +172,6 @@ let g:airline_theme='bubblegum'
 "let g:airline_section_y = airline#section#create([''])
 let g:airline_section_z = airline#section#create(['linenr', 'maxlinenr', 'colnr'])
 
-colorscheme codedark
+colorscheme dim
 
-"autocmd VimEnter * redraw!
+set t_RV=
