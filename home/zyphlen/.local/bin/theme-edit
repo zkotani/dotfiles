@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+theme="$1"
+
+/usr/bin/editor "${HOME}/.oh-my-zsh/custom/themes/${theme}.zsh-theme"
